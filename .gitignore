@@ -1,0 +1,6 @@
+SitemapGenerator/App_Data/
+packages/
+bin/
+obj/
+*.user
+*.suo

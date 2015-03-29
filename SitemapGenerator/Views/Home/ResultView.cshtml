@@ -1,0 +1,22 @@
+﻿@model object
+
+	<div style="margin-top:100px;width:650px; text-align:center">
+
+		@if (!Convert.ToBoolean(ViewBag.Clear))
+		{
+			<div class="alert alert-warning" role="alert">
+				<strong>Warning!</strong> Сталася одна або декілька помилок.
+			</div>
+			@ViewBag.TestError
+		}
+		else
+		{
+			<div class="alert alert-success" role="alert">
+				Генерація успішно завершена
+			</div>
+		}
+
+		@if (Model != null) {
+			<a href="@Url.RouteUrl("Download", new { fileName = Model })">Завантажити</a>
+		}
+	</div>
